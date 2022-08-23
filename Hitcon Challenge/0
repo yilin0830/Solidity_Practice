@@ -1,0 +1,3 @@
+await contract.methods.giveMeYourAddress(player).send({from:player})
+await contract.methods.giveMeContractAddress("0x517B092929fA1063A2885B682D2198913E440694").send({from:player})
+await contract.methods.giveMeUint(13371337).send({from:player})
