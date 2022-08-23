@@ -1,0 +1,1 @@
+await contract.methods.addPoints(-100000000000).send({from:player})

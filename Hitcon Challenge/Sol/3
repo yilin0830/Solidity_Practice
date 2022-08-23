@@ -1,0 +1,2 @@
+await web3.eth.getStorageAt(instance,0)
+await contract.methods.auth("0x686974636f6e5f69735f766572795f676f6f645f4c4c4c4c4c4f4c4c4c4c4c00").send({from:player})
