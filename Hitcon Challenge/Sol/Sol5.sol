@@ -16,9 +16,11 @@ contract Sol5 {
         unchecked {
             // TODO: Implement the calculation of key value here.
             //       Noted the way to turn contract address into uint64 is uint64(uint160(address(this)))
-            while(uint64(uint160(address(this))) ^ uint64(key) != uint64(0) - 1) {
-                key = key + bytes8("1");
+            uint64 key2 = 0;
+            while(uint64(uint160(address(this))) ^ key2 != uint64(0) - 1) {
+                key2++;
             }
+            key = bytes8(key2);
         }
         
         // TODO: Implement for looping gas fee here. 
