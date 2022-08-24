@@ -1,8 +1,13 @@
+/*
+Points
+學習 int 與 unsigned int
+
 msg.sender 是直接呼叫合約的對象，即有可能為錢包地址或合約地址；tx.origin 則是最原始的錢包地址。
 關於 gas fee，我們可以透過觀察 Remix 來得知或者直接爆破 22 次來滿足條件。
 挑戰 5 提示
 https://gist.github.com/AlbertLin0327/96411634362bf1d5f5aa64897d9a808a
-``` solidity
+*/
+
 pragma solidity ^0.8.10;
 
 contract Vuln5 {
@@ -41,4 +46,3 @@ contract Vuln5 {
         crackerList[tx.origin] = true;
     }
 }
-```
