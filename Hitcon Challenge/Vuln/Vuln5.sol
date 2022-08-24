@@ -1,6 +1,6 @@
 /*
-Points
-學習 int 與 unsigned int
+Final Gates
+學習辨別 msg.sender 和 tx.origin、得知 gasleft 的值、計算 xor
 
 msg.sender 是直接呼叫合約的對象，即有可能為錢包地址或合約地址；tx.origin 則是最原始的錢包地址。
 關於 gas fee，我們可以透過觀察 Remix 來得知或者直接爆破 22 次來滿足條件。
