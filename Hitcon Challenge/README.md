@@ -1,1 +1,1 @@
-https://wargame.hitcon2022.online/home
+https://wargame.hitcon2022.online/
