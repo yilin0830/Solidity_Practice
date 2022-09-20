@@ -3,7 +3,7 @@ pragma solidity ^0.8.0;
 contract Sol5 {
     address public target;
 
-    constructor(address target_) {
+    constructor(address target_) {  //0x30A9468f3ae1B49F5Cd0d79651170D02a8444ABA
         target = target_;
     }
     
@@ -16,10 +16,7 @@ contract Sol5 {
         unchecked {
             // TODO: Implement the calculation of key value here.
             //       Noted the way to turn contract address into uint64 is uint64(uint160(address(this)))
-            uint64 key2 = 0;
-            while(uint64(uint160(address(this))) ^ key2 != uint64(0) - 1) {
-                key2++;
-            }
+            uint64 key2 = uint64(uint160(address(this))) ^  (uint64(0) - 1);
             key = bytes8(key2);
         }
         
