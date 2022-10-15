@@ -2,9 +2,9 @@
 
 pragma solidity >= 0.8.4;
 
-contract Integer {
-    int8 public i8 = 0;
-    int256 public integer = 0;
+contract Bollean {
+    bool public a = true;
+    bool public b = false;
 
     constructor() {}
 }
