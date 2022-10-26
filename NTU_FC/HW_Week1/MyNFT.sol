@@ -6,15 +6,27 @@ import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 
 contract MyNFT is ERC721 {
-    constructor() ERC721("BoralinNFT", "BNFT") {}
+    using Counters for Counters.Counter;
+    Counters.Counter private _tokenIds;
 
-    function mint() public {
-        _mint(msg.sender, 0);
-        _mint(msg.sender, 1);
+    constructor() ERC721("BoralinNFT", "BNFT") {
+        
+        uint256 newItemId = _tokenIds.current();
+        _mint(msg.sender, newItemId);
+        _tokenIds.increment();
+
+        
+        newItemId = _tokenIds.current();
+        _mint(msg.sender, newItemId);
+        _tokenIds.increment();
     }
 
-    function mintToken(uint tokenId, address to) public{
-        _mint(to, tokenId);
+    function mintToken(uint amount, address to) public{
+        for (uint256 i = 0; i < amount; i++) {
+            uint256 newItemId = _tokenIds.current();
+            _mint(to, newItemId);
+            _tokenIds.increment();
+        }
     }
 
 }
