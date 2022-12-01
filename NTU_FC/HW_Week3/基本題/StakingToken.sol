@@ -8,4 +8,3 @@ contract testERC20 is ERC20 {
         // _mint(msg.sender, 10 ** (9 + 18));
         _mint(msg.sender, 1_000_000_000 * 1e18);
     }
-}
